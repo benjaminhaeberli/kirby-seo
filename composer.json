@@ -1,0 +1,34 @@
+{
+    "name": "benjaminhaeberli/kirby3-seo",
+    "description": "🔎 Minimal SEO plugin for Kirby CMS – for PHP lovers.",
+    "version": "0.1.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Benjamin Haeberli",
+            "email": "hello@benjaminhaeberli.ch",
+            "homepage": "https://benjaminhaeberli.ch/"
+        }
+    ],
+    "keywords": [
+        "kirby",
+        "seo",
+        "kirby-plugin"
+    ],
+    "autoload": {
+        "psr-4": {
+            "KirbySeo\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "getkirby/composer-installer": true,
+            "funkjedi/composer-include-files": true,
+            "pestphp/pest-plugin": true
+        },
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}

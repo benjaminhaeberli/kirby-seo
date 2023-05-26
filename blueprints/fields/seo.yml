@@ -1,0 +1,36 @@
+type: group
+fields:
+  kirbyseoobject:
+    label: SEO
+    type: object
+    fields:
+      kirbyseometatitle:
+        label:
+          en: Meta title
+          fr: Méta-titre
+        type: text
+        help:
+          en: 'Recommendation : between 45 and 65 caracters'
+          fr: 'Recommandation : entre 45 et 65 caractères'
+        maxlength: 80
+      kirbyseometadesc:
+        label:
+          en: Meta description
+          fr: Méta-description
+        type: textarea
+        maxlength: 240
+        buttons: false
+        size: small
+        help:
+          en: 'Recommendation : less than 160 caracters'
+          fr: 'Recommandation : moins de 160 caractères'
+      kirbyseokeywords:
+        label:
+          en: Keywords
+          fr: Tags
+        type: tags
+      kirbyseocanonicalurl:
+        label:
+          en: Canonical URL
+          fr: URL canonique
+        type: url
