@@ -1,0 +1,34 @@
+name: tests
+
+on: ['push', 'pull_request']
+
+jobs:
+  test-php-code:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [ubuntu-latest]
+        php: [8.0, 8.1, 8.2]
+
+    name: 🐘 PHP ${{ matrix.php }} - ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: dom, mbstring, zip
+          tools: prestissimo
+          coverage: pcov
+
+      - name: Install COMPOSER
+        run: composer install --no-interaction
+
+      - name: Test COMPOSER
+        run: composer validate --strict --no-interaction
+
+      - name: Test PHP
+        run: composer test
