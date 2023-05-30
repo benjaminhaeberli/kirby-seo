@@ -1,9 +1,9 @@
-<p>
+<p align="center">
     <img src="./logo.svg" width="256px" alt="Logo of Kirby SEO"></br>
     <span>🔎 Minimal SEO plugin for Kirby CMS – for PHP lovers<span>
 </p>
 
-<p>
+<p align="center">
     <a href="https://github.com/benjaminhaeberli/kirby-seo/actions"><img src="https://github.com/benjaminhaeberli/kirby-seo/workflows/tests/badge.svg" alt="Build Status"></a>
     <a href="https://packagist.org/packages/benjaminhaeberli/kirby-seo"><img src="https://img.shields.io/packagist/dt/benjaminhaeberli/kirby-seo" alt="Total Downloads"></a>
     <a href="https://packagist.org/packages/benjaminhaeberli/kirby-seo"><img src="https://img.shields.io/github/v/release/benjaminhaeberli/kirby-seo" alt="Latest Stable Version"></a>
