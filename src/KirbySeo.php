@@ -2,56 +2,68 @@
 
 declare(strict_types=1);
 
-namespace KirbySeo;
+namespace BenjaminHaeberli\KirbySeo;
 
 use Kirby\Cms\App;
 use Kirby\Cms\Field;
 use Kirby\Cms\Page;
 use Kirby\Cms\Site;
-use Kirby\Toolkit\A;
 use Kirby\Cms\Url;
+use Kirby\Toolkit\A;
 
 final class KirbySeo implements KirbySeoInterface
 {
-    protected ?Field  $metaTitle        = null;
-    protected ?Field  $metaDescription  = null;
-    protected ?Field  $metaKeywords     = null;
-    protected string $metaRobots       = '';
-    protected string $metaUrl          = '';
-    protected string $metaImageUrl     = '';
-    protected string  $metaCanonicalUrl = '';
+    private ?Field  $metaTitle = null;
 
-    protected string $ogType           = '';
-    protected ?Field $ogSitename       = null;
-    protected string $ogLocale          = '';
+    private ?Field  $metaDescription = null;
 
-    protected string $twitterCard      = '';
-    protected string $twitterSite      = '';
-    protected string $twitterCreator   = '';
+    private ?Field  $metaKeywords = null;
 
-    final public function __construct(Page $page, App $kirby, Site $site)
+    private string $metaRobots = '';
+
+    private string $metaUrl = '';
+
+    private string $metaImageUrl = '';
+
+    private string  $metaCanonicalUrl = '';
+
+    private string $ogType = '';
+
+    private ?Field $ogSitename = null;
+
+    private string $ogLocale = '';
+
+    private string $twitterCard = '';
+
+    private string $twitterSite = '';
+
+    private string $twitterCreator = '';
+
+    final public function __construct(App $kirby, Page $page)
     {
+        $site = $kirby->site();
+
         if ($seoobject = $page->kirbyseoobject()->toObject()) {
-            $this->metaTitle        =   $seoobject->kirbyseometatitle();
-            $this->metaDescription  =   $seoobject->kirbyseometadesc();
-            $this->metaKeywords     =   $seoobject->kirbyseokeywords();
-            $this->metaCanonicalUrl        =   $seoobject->kirbyseocanonicalurl()->isNotEmpty() ? $seoobject->kirbyseocanonicalurl()->toString() : site()->url();
+            $this->metaTitle = $seoobject->kirbyseometatitle();
+            $this->metaDescription = $seoobject->kirbyseometadesc();
+            $this->metaKeywords = $seoobject->kirbyseokeywords();
+            $this->metaCanonicalUrl = $seoobject->kirbyseocanonicalurl()->isNotEmpty() ? $seoobject->kirbyseocanonicalurl()->toString() : site()->url();
         }
 
-        $this->metaRobots       =   'index, follow, noodp';
-        $this->metaUrl          =   $page->url();
+        $this->metaRobots = 'index, follow, noodp';
+        $this->metaUrl = $page->url();
         /* $this->metaImageUrl        =   $page->shareimage()->toFile() ? $page->shareimage()->toFile()->crop(1280, 720)->url() : ''; */
-        $this->metaImageUrl        =   Url::to('assets/og_image.jpg');
+        $this->metaImageUrl = Url::to('assets/og_image.jpg');
 
         // Facebook Meta
-        $this->ogType        =   'website';
-        $this->ogSitename        =   $site->title();
-        $this->ogLocale        =   A::first(kirby()->language()->locale());
+        $this->ogType = 'website';
+        $this->ogSitename = $site->title();
+        $this->ogLocale = A::first(kirby()->language()->locale());
 
         // Twitter  Meta
-        $this->twitterCard        =   'summary_large_image';
-        $this->twitterSite        =   $site->socialtwitterurl()->isNotEmpty() ? $site->socialtwitterurl() : '';
-        $this->twitterCreator        =   $site->twittercreator()->isNotEmpty() ? $site->twittercreator() : '';
+        $this->twitterCard = 'summary_large_image';
+        $this->twitterSite = $site->socialtwitterurl()->isNotEmpty() ? $site->socialtwitterurl() : '';
+        $this->twitterCreator = $site->twittercreator()->isNotEmpty() ? $site->twittercreator() : '';
     }
 
     public function getMetaTitle(): ?Field

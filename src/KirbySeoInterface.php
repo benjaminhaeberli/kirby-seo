@@ -2,16 +2,15 @@
 
 declare(strict_types=1);
 
-namespace KirbySeo;
+namespace BenjaminHaeberli\KirbySeo;
 
 use Kirby\Cms\App;
 use Kirby\Cms\Field;
 use Kirby\Cms\Page;
-use Kirby\Cms\Site;
 
 interface KirbySeoInterface
 {
-    public function __construct(Page $page, App $kirby, Site $site);
+    public function __construct(App $kirby, Page $page);
 
     public function getMetaTitle(): ?Field;
 
