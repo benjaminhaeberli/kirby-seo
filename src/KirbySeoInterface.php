@@ -5,18 +5,17 @@ declare(strict_types=1);
 namespace BenjaminHaeberli\KirbySeo;
 
 use Kirby\Cms\App;
-use Kirby\Cms\Field;
 use Kirby\Cms\Page;
 
 interface KirbySeoInterface
 {
     public function __construct(App $kirby, Page $page);
 
-    public function getMetaTitle(): ?Field;
+    public function getMetaTitle(): string;
 
-    public function getMetaDescription(): ?Field;
+    public function getMetaDescription(): string;
 
-    public function getMetaKeywords(): ?Field;
+    public function getMetaKeywords(): string;
 
     public function getMetaRobots(): string;
 
@@ -28,7 +27,7 @@ interface KirbySeoInterface
 
     public function getOgType(): string;
 
-    public function getOgSitename(): ?Field;
+    public function getOgSitename(): string;
 
     public function getOgLocale(): string;
 

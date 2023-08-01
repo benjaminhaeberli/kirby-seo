@@ -1,0 +1,41 @@
+type: group
+fields:
+  kirbyseositeobject:
+    label: SEO
+    type: object
+    fields:
+      kirbyseositetitle:
+        label:
+          en: Site title
+          fr: Titre du site
+        type: text
+        help:
+          en: 'Recommendation : less than 60 caracters'
+          fr: 'Recommandation : moins de 60 caractères'
+        maxlength: 80
+      kirbyseoimage:
+        label:
+          en: Image
+          fr: Image
+        type: files
+        search: true
+        sortBy: filename asc
+        help:
+          en: 'Used as a preview when sharing on social networks</br> Recommanded size : 1200x630 | More informations on https://ogp.me/'
+          fr: 'Utilisée comme aperçu lors des partages sur les réseaux sociaux</br> Taille recommandée : 1200x630 | Plus d'informations sur https://ogp.me/'
+        limit: 5
+      kirbyseotwittercreator:
+        label:
+          en: Twitter (Creator)
+          fr: Twitter (Créateur)
+        type: text
+        placeholder: '@example'
+        maxlength: 16
+      kirbyseotwitterurl:
+        label:
+          en: Twitter (Site)
+          fr: Twitter (Site)
+        type: text
+        placeholder: '@example'
+        maxlength: 16
+
