@@ -40,7 +40,7 @@ final class KirbySeo implements KirbySeoInterface
     {
         // Site based meta
         if ($seoobject = $kirby->site()->kirbyseositeobject()->toObject()) {
-            $this->metaImageUrl =  $seoobject->kirbyseoimage()->toFile()->crop(1200, 630)->url() ?: '';
+            $this->metaImageUrl =  $seoobject->kirbyseoimage()->toFile()?->crop(1200, 630)->url() ?: '';
             $this->ogSitename = $seoobject->kirbyseositetitle()->value() ?: '';
             $this->twitterSite = $seoobject->kirbyseotwitterurl()->value() ?: '';
             $this->twitterCreator = $seoobject->kirbyseotwittercreator()->value() ?: '';
