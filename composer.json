@@ -81,7 +81,7 @@
         "laravel/pint": "^1.10",
         "pestphp/pest": "^2.6.1",
         "phpstan/phpstan": "^1.10.15",
-        "rector/rector": "^0.19.0",
+        "rector/rector": "^1.2.10",
         "sempro/phpunit-pretty-print": "^1.2.1"
     }
 }
