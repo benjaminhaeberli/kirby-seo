@@ -320,16 +320,16 @@
         },
         {
             "name": "getkirby/cms",
-            "version": "4.7.0",
+            "version": "4.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/kirby.git",
-                "reference": "938fe98951cace6c77aab744779bf4e0799ad705"
+                "reference": "053f21f45a53b96ab623fba4345e129388a983cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/kirby/zipball/938fe98951cace6c77aab744779bf4e0799ad705",
-                "reference": "938fe98951cace6c77aab744779bf4e0799ad705",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/053f21f45a53b96ab623fba4345e129388a983cb",
+                "reference": "053f21f45a53b96ab623fba4345e129388a983cb",
                 "shasum": ""
             },
             "require": {
@@ -419,7 +419,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2025-03-25T11:15:09+00:00"
+            "time": "2025-05-13T10:46:38+00:00"
         },
         {
             "name": "getkirby/composer-installer",
@@ -844,7 +844,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.31.0",
+            "version": "v1.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -903,7 +903,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.31.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.32.0"
             },
             "funding": [
                 {
@@ -1006,7 +1006,7 @@
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
-            "version": "v1.31.0",
+            "version": "v1.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
@@ -1067,7 +1067,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.31.0"
+                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.32.0"
             },
             "funding": [
                 {
