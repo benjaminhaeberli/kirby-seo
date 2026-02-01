@@ -12,4 +12,8 @@ App::plugin('benjaminhaeberli/kirby-seo', [
         'fields/seo/meta' => __DIR__ . '/blueprints/fields/seo.yml',
         'fields/seo/site' => __DIR__ . '/blueprints/fields/site.yml',
     ],
+    'translations' => [
+        'en' => require __DIR__ . '/translations/en.php',
+        'fr' => require __DIR__ . '/translations/fr.php',
+    ],
 ]);

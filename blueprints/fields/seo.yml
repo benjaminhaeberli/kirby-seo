@@ -5,32 +5,20 @@ fields:
     type: object
     fields:
       kirbyseometatitle:
-        label:
-          en: Meta title
-          fr: Méta-titre
+        label: benjaminhaeberli.kirby-seo.meta.title
         type: text
-        help:
-          en: 'Recommendation: between 45 and 65 characters'
-          fr: 'Recommandation : entre 45 et 65 caractères'
+        help: benjaminhaeberli.kirby-seo.meta.title.help
         maxlength: 80
       kirbyseometadesc:
-        label:
-          en: Meta description
-          fr: Méta-description
+        label: benjaminhaeberli.kirby-seo.meta.description
         type: textarea
         maxlength: 240
         buttons: false
         size: small
-        help:
-          en: 'Recommendation: less than 160 characters'
-          fr: 'Recommandation : moins de 160 caractères'
+        help: benjaminhaeberli.kirby-seo.meta.description.help
       kirbyseokeywords:
-        label:
-          en: Keywords
-          fr: Tags
+        label: benjaminhaeberli.kirby-seo.keywords
         type: tags
       kirbyseocanonicalurl:
-        label:
-          en: Canonical URL
-          fr: URL canonique
+        label: benjaminhaeberli.kirby-seo.canonical.url
         type: url

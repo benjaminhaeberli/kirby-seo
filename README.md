@@ -122,7 +122,9 @@ The snippet generates the following HTML (tags with empty values are omitted):
 
 ## Panel translations
 
-Blueprint labels and help texts are available in **English** and **French**. Contributions for additional languages are welcome via pull request -- simply add a new language key to the YAML files in `blueprints/fields/`.
+Blueprint labels and help texts use Kirby's [plugin translations](https://getkirby.com/docs/reference/plugins/extensions/translations) system. English and French are included.
+
+To add a new language, create a file in `translations/` (e.g. `de.php`) following the same format as `en.php`, and register it in `index.php`. Contributions are welcome via pull request.
 
 ## Development
 
