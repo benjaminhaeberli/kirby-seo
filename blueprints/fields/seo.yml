@@ -10,7 +10,7 @@ fields:
           fr: Méta-titre
         type: text
         help:
-          en: 'Recommendation : between 45 and 65 caracters'
+          en: 'Recommendation: between 45 and 65 characters'
           fr: 'Recommandation : entre 45 et 65 caractères'
         maxlength: 80
       kirbyseometadesc:
@@ -22,7 +22,7 @@ fields:
         buttons: false
         size: small
         help:
-          en: 'Recommendation : less than 160 caracters'
+          en: 'Recommendation: less than 160 characters'
           fr: 'Recommandation : moins de 160 caractères'
       kirbyseokeywords:
         label:

@@ -10,7 +10,7 @@ fields:
           fr: Titre du site
         type: text
         help:
-          en: 'Recommendation : less than 60 caracters'
+          en: 'Recommendation: less than 60 characters'
           fr: 'Recommandation : moins de 60 caractères'
         maxlength: 80
       kirbyseoimage:
@@ -21,7 +21,7 @@ fields:
         search: true
         sortBy: filename asc
         help:
-          en: 'Used as a preview when sharing on social networks</br> Recommanded size : 1200x630 | More informations on https://ogp.me/'
+          en: 'Used as a preview when sharing on social networks</br> Recommended size: 1200x630 | More information on https://ogp.me/'
           fr: 'Utilisée comme aperçu lors des partages sur les réseaux sociaux</br> Taille recommandée : 1200x630 | Plus d'informations sur https://ogp.me/'
         limit: 5
       kirbyseotwittercreator:
