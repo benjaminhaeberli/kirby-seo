@@ -72,16 +72,15 @@
         ]
     },
     "require": {
-        "php": "^8.1",
+        "php": "^8.2",
         "funkjedi/composer-include-files": "^1.1",
-        "getkirby/cms": "^4.0.1",
+        "getkirby/cms": "^4.0.1 || ^5.0",
         "getkirby/composer-installer": "^1.2.1"
     },
     "require-dev": {
-        "laravel/pint": "^1.10",
-        "pestphp/pest": "^2.6.1",
-        "phpstan/phpstan": "^1.10.15",
-        "rector/rector": "^0.19.0",
-        "sempro/phpunit-pretty-print": "^1.2.1"
+        "laravel/pint": "^1.17",
+        "pestphp/pest": "^3.0",
+        "phpstan/phpstan": "^1.12",
+        "rector/rector": "^1.0"
     }
 }

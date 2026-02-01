@@ -58,7 +58,7 @@ final class KirbySeo implements KirbySeoInterface
         $this->metaRobots = 'index, follow, noodp';
         $this->metaUrl = $page->url();
         $this->ogType = 'website';
-        $this->ogLocale = A::first(kirby()->language()->locale());
+        $this->ogLocale = $kirby->language() instanceof \Kirby\Cms\Language ? A::first($kirby->language()->locale()) : '';
         $this->twitterCard = 'summary_large_image';
     }
 
