@@ -1,5 +1,6 @@
 /vendor
 /.vscode
+/.phpunit.cache
 
 Icon
 
