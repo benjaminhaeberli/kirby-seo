@@ -1,9 +1,10 @@
 /vendor
 /.vscode
+/.phpunit.cache
+composer.lock
 
 Icon
 
-.lock
 .DS_Store
 
 php_errors.log
