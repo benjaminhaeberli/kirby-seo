@@ -5,9 +5,6 @@ parameters:
     - tests/
 
   level: 6
-  #  excludePaths:
-  #    - site/config/routes.php
+
   ignoreErrors:
     - "#Call to an undefined method Kirby#"
-#
-#    checkMissingIterableValueType: false
