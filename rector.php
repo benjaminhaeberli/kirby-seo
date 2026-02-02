@@ -3,26 +3,20 @@
 declare(strict_types=1);
 
 use Rector\Config\RectorConfig;
-use Rector\Set\ValueObject\LevelSetList;
-use Rector\Set\ValueObject\SetList;
 
-return static function (RectorConfig $rectorConfig): void {
-    $rectorConfig->paths([
+return RectorConfig::configure()
+    ->withPaths([
         __DIR__ . '/snippets',
         __DIR__ . '/src',
         __DIR__ . '/tests',
-    ]);
-
-    $rectorConfig->autoloadPaths([
-        './src/bootstrap.php'
-    ]);
-
-    $rectorConfig->sets([
-        LevelSetList::UP_TO_PHP_82,
-        SetList::PHP_82,
-        SetList::CODE_QUALITY,
-        SetList::DEAD_CODE,
-        SetList::PRIVATIZATION,
-        SetList::TYPE_DECLARATION,
-    ]);
-};
+    ])
+    ->withAutoloadPaths([
+        './src/bootstrap.php',
+    ])
+    ->withPhpSets(php82: true)
+    ->withPreparedSets(
+        codeQuality: true,
+        deadCode: true,
+        privatization: true,
+        typeDeclarations: true,
+    );
